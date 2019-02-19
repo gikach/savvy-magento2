@@ -6,7 +6,7 @@ define([
 
 
         if (savvy.config.fiat_value > 0) {
-            window.paybear = new Paybear({
+            window.savvy = new Savvy({
                 button: '#savvy-all',
                 fiatValue: savvy.config.fiat_value,
                 currencies: savvy.config.currencies,
