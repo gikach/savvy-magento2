@@ -72,6 +72,12 @@
                     <label>Testnet</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="debug" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="80" translate="label"
+                       type="select">
+                    <label>Debug</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>logging to file 'var/log/savvy.log' by default</comment>
+                </field>
             </group>
         </section>
     </system>

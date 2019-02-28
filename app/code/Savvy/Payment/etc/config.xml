@@ -15,6 +15,7 @@
                 <minoverpaymentfiat>1</minoverpaymentfiat>
                 <maxunderpaymentfiat>0.1</maxunderpaymentfiat>
                 <lock_address_timeout>86400</lock_address_timeout>
+                <debug>0</debug>
             </savvy>
         </payment>
     </default>

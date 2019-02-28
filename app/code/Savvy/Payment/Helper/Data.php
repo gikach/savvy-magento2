@@ -78,13 +78,16 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     public function log($data, $file_mame = 'savvy.log')
     {
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/' . $file_mame);
-        $logger = new \Zend\Log\Logger();
-        $logger->addWriter($writer);
-        if (is_object($data) || (is_array($data))) {
-            $logger->info(print_r($data, true));
-        } else {
-            $logger->info($data);
+        $debug = $this->scopeConfig->getValue('payment/savvy/debug', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        if ($debug) {
+            $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/' . $file_mame);
+            $logger = new \Zend\Log\Logger();
+            $logger->addWriter($writer);
+            if (is_object($data) || (is_array($data))) {
+                $logger->info(print_r($data, true));
+            } else {
+                $logger->info($data);
+            }
         }
     }
 
