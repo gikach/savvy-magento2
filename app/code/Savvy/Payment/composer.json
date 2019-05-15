@@ -1,6 +1,7 @@
 {
     "name": "savvy/module-payment",
     "description": "",
+    "version": "1.0.4",
     "type": "magento2-module",
     "license": "proprietary",
     "authors": [
